@@ -55,7 +55,7 @@ export async function generateDocx(form) {
   updateProductDatalist();
   saveInvoiceNumber(invoiceNumber);
 
-  const templateContent = await fetch(templateUrl).then((res) =>
+  const templateContent = await fetch("template.docx").then((res) =>
     res.arrayBuffer()
   );
   console.log("🚀 ~ generateDocx ~ templateContent:", templateContent);
