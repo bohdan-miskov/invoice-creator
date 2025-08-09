@@ -8,6 +8,7 @@ import {
   updateProductDatalist,
 } from "./storage";
 import { sumToWordsUA } from "./sumToWordsUa";
+import templateUrl from "./template.docx?url";
 
 export async function generateDocx(form) {
   const fileName = form.fileName.value.trim();
@@ -54,7 +55,7 @@ export async function generateDocx(form) {
   updateProductDatalist();
   saveInvoiceNumber(invoiceNumber);
 
-  const templateContent = await fetch("/template.docx").then((res) =>
+  const templateContent = await fetch(templateUrl).then((res) =>
     res.arrayBuffer()
   );
   console.log("🚀 ~ generateDocx ~ templateContent:", templateContent);

@@ -7,10 +7,6 @@ import {
   updateProductDatalist,
 } from "./storage";
 
-const templateContent = await fetch("/template.docx").then((res) =>
-  res.arrayBuffer()
-);
-console.log("🚀 ~ templateContent:", templateContent);
 initInvoiceDate();
 updateProductDatalist();
 document.querySelector('input[name="invoiceNumber"]').value =
