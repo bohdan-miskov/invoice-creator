@@ -7,7 +7,6 @@ import {
   updateProductDatalist,
 } from "./storage";
 
-// Ініціалізація
 const templateContent = await fetch("/template.docx").then((res) =>
   res.arrayBuffer()
 );
