@@ -8,6 +8,7 @@ export default defineConfig(({ command }) => {
     define: {
       [command === "serve" ? "global" : "_global"]: {},
     },
+    base: "/invoice-creator/",
     root: "src",
     build: {
       sourcemap: true,
