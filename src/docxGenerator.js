@@ -1,13 +1,12 @@
 import PizZip from "pizzip";
 import Docxtemplater from "docxtemplater";
-import { sumToWordsUA } from "./sumToWordsUa.js";
 import {
   loadProductsFromStorage,
-  saveProductsToStorage,
   saveInvoiceNumber,
+  saveProductsToStorage,
   updateProductDatalist,
-  saveToDirectory,
-} from "./storage.js";
+} from "./storage";
+import { sumToWordsUA } from "./sumToWordsUa";
 
 export async function generateDocx(form) {
   const fileName = form.fileName.value.trim();

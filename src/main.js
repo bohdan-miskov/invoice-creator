@@ -1,11 +1,11 @@
+import { generateDocx } from "./docxGenerator";
 import {
+  addProductRow,
+  chooseDirectory,
   initInvoiceDate,
   loadInvoiceNumber,
-  addProductRow,
   updateProductDatalist,
-} from "./storage.js";
-import { chooseDirectory, saveToDirectory, showSaveStatus } from "./storage.js";
-import { generateDocx } from "./docxGenerator.js";
+} from "./storage";
 
 // Ініціалізація
 initInvoiceDate();
