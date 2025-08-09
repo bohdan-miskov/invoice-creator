@@ -4,6 +4,7 @@ import {
   loadProductsFromStorage,
   saveInvoiceNumber,
   saveProductsToStorage,
+  saveToDirectory,
   updateProductDatalist,
 } from "./storage";
 import { sumToWordsUA } from "./sumToWordsUa";
@@ -53,7 +54,7 @@ export async function generateDocx(form) {
   updateProductDatalist();
   saveInvoiceNumber(invoiceNumber);
 
-  const templateContent = await fetch("/template.docx").then((res) =>
+  const templateContent = await fetch("./template.docx").then((res) =>
     res.arrayBuffer()
   );
   const zip = new PizZip(templateContent);
