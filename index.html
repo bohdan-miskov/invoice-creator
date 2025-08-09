@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Invoices generator</title>
+  </head>
+  <body>
+    <h1>Створення видаткової накладної</h1>
+
+    <form id="invoiceForm">
+      <label>
+        Ім'я файлу:
+        <input
+          name="fileName"
+          placeholder="Ім'я файлу"
+          value="Накладна"
+          required
+        />
+      </label>
+      <label>
+        Постачальник:
+        <input
+          name="supplier"
+          placeholder="Постачальник"
+          value="Моно Електро"
+          required
+        />
+      </label>
+      <label>
+        Покупець:
+        <input
+          name="buyer"
+          placeholder="Покупець"
+          value="Фізична особа"
+          required
+        />
+      </label>
+      <label>
+        № накладної:
+        <input name="invoiceNumber" placeholder="Номер" required />
+      </label>
+      <label>
+        Дата:
+        <input name="invoiceDate" type="date" id="invoiceDate" required />
+      </label>
+      <label>
+        Директорія збереження:
+        <button type="button" id="chooseDirBtn">Вибрати папку</button>
+        <span id="chosenPathLabel">(не вибрано)</span>
+      </label>
+
+      <h3>Товари</h3>
+      <div id="items">
+        <div class="item-row">
+          <input
+            name="productName"
+            list="products"
+            placeholder="Назва товару"
+            required
+          />
+          <input
+            name="qty"
+            type="number"
+            step="1"
+            placeholder="Кількість"
+            required
+          />
+          <input
+            name="measurementUnit"
+            placeholder="Одиниця вимірювання"
+            required
+          />
+          <input
+            name="price"
+            type="number"
+            step="0.01"
+            placeholder="Ціна"
+            required
+          />
+        </div>
+      </div>
+
+      <datalist id="products"></datalist>
+
+      <button type="button" id="addRowBtn">Додати товар</button>
+      <button type="submit">Створити DOCX</button>
+    </form>
+    <div id="saveStatus"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+}
+label {
+  display: block;
+  margin-top: 10px;
+}
+input,
+select,
+button {
+  font-size: 1rem;
+  padding: 5px;
+  margin-top: 5px;
+  width: 100%;
+  /* max-width: 400px; */
+}
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 900px;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+}
+.item-row {
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  gap: 10px;
+}
+.item-row input {
+  width: 100%;
+}
+
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  max-height: 120px;
+  overflow-y: auto;
+  background: white;
+  position: absolute;
+  z-index: 1000;
+}
+.autocomplete-suggestion {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+  background: #ddd;
+}

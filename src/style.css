@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input,
+select,
+button {
+  font-size: 1rem;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  background-color: #004a9a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.item-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.item-row > input {
+  flex: 1 1 200px;
+  min-width: 120px;
+}
+
+.item-row > :first-child {
+  flex-basis: 100%;
+}
+
+.item-row > :first-child {
+  flex-basis: 100%;
+}
+
+#chosenPathLabel {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #004a9a;
+}
+
+#saveStatus {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  max-height: 120px;
+  overflow-y: auto;
+  background: white;
+  position: absolute;
+  z-index: 1000;
+}
+
+.autocomplete-suggestion {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.autocomplete-suggestion:hover {
+  background: #ddd;
+}
+
+/*  Адаптивність */
+@media (max-width: 600px) {
+  body {
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+
+  .item-row {
+    flex-direction: column;
+  }
+
+  .item-row > input {
+    flex: auto;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+}
