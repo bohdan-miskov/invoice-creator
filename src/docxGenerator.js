@@ -54,9 +54,10 @@ export async function generateDocx(form) {
   updateProductDatalist();
   saveInvoiceNumber(invoiceNumber);
 
-  const templateContent = await fetch("./template.docx").then((res) =>
+  const templateContent = await fetch("/template.docx").then((res) =>
     res.arrayBuffer()
   );
+  console.log("🚀 ~ generateDocx ~ templateContent:", templateContent);
   const zip = new PizZip(templateContent);
   const doc = new Docxtemplater(zip, { paragraphLoop: true, linebreaks: true });
 

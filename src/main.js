@@ -8,6 +8,10 @@ import {
 } from "./storage";
 
 // Ініціалізація
+const templateContent = await fetch("/template.docx").then((res) =>
+  res.arrayBuffer()
+);
+console.log("🚀 ~ templateContent:", templateContent);
 initInvoiceDate();
 updateProductDatalist();
 document.querySelector('input[name="invoiceNumber"]').value =
