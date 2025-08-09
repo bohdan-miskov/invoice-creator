@@ -8,7 +8,7 @@ import {
   updateProductDatalist,
 } from "./storage";
 import { sumToWordsUA } from "./sumToWordsUa";
-import templateUrl from "./template.docx?url";
+import templateUrl from "/template.docx?url";
 
 export async function generateDocx(form) {
   const fileName = form.fileName.value.trim();
